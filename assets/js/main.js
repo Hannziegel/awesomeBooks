@@ -30,6 +30,7 @@ function createArticle() {
             bookArticleRemove.appendChild(bookArticleRemoveButton)
     });
 }
+
 // Add content to bookList
 
 function addBook(titleName, authorName, index){
@@ -50,7 +51,8 @@ addBook('5', 'quatro',4)
 
 createArticle()
 console.log('Page loaded ', bookList)
-// Remove button
+
+// Remove elements button
 
 document.querySelectorAll('.removeButton').forEach((element) => 
     element.addEventListener('click', () => {
@@ -61,3 +63,15 @@ document.querySelectorAll('.removeButton').forEach((element) =>
     console.log('Element deleted ', bookList)
     //createArticle()
 }))
+
+// Add button 
+const formData = document.getElementById('form-info');
+
+document.getElementById('addButton').addEventListener('click', (event) => {
+
+    event.preventDefault();
+    const inputTextContent = document.getElementById('formTitle').value;   
+    const inputAuthorContent = document.getElementById('formAuthor').value;   
+    
+    addBook(inputTextContent, inputAuthorContent);
+})
