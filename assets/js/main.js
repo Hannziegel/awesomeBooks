@@ -75,3 +75,16 @@ document.getElementById('addButton').addEventListener('click', (event) => {
     
     addBook(inputTextContent, inputAuthorContent);
 })
+
+const form = document.getElementById('#form')
+
+document.getElementById('addButton').addEventListener('click', (event) =>{
+    console.log('I clicked add button')
+    //articlesContainer.remove();
+    event.preventDefault();
+    const inputTextContent = document.getElementById('formTitle').value;
+    const inputAuthorContent = document.getElementById('formAuthor').value;;
+    addBook(inputTextContent, inputAuthorContent) 
+    console.log(bookList)
+    createArticle()  
+})
