@@ -1,0 +1,8 @@
+li{
+    list-style: none;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+}
